@@ -4,6 +4,9 @@ import Expenses from "./components/ExpenseApp/Expenses";
 import NewExpense from "./components/InputExpense/NewExpense";
 
 const App = () => {
+  const saveExpenseDataItem = (expenseItem) => {
+    console.log("Printing from App", expenseItem);
+  };
   const expenses = [
     {
       id: "e1",
@@ -28,7 +31,7 @@ const App = () => {
   return (
     <div>
       <h2>Let's Get Started</h2>
-      <NewExpense />
+      <NewExpense onSaveExpense={saveExpenseDataItem} />
       <Expenses expenses={expenses} />
     </div>
   );
