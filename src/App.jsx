@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/ExpenseApp/Expenses";
+import NewExpense from "./components/InputExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -24,7 +25,13 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-  return <Expenses expenses={expenses} />;
+  return (
+    <div>
+      <h2>Let's Get Started</h2>
+      <NewExpense />
+      <Expenses expenses={expenses} />
+    </div>
+  );
 };
 
 export default App;
