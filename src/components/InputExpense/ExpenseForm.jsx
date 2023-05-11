@@ -20,9 +20,10 @@ const ExpenseForm = ({ onSaveExpenseDate }) => {
     const newExpenseObject = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
-    console.log(newExpenseObject);
+    // console.log(newExpenseObject.date);
+    // console.log(typeof newExpenseObject.date);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");

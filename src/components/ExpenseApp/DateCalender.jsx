@@ -5,6 +5,7 @@ const DateCalender = ({ date }) => {
   const month = date.toLocaleString("default", { month: "long" });
   const year = date.getFullYear();
   const day = date.getDate();
+  // console.log(date.getFullYear());
   return (
     <div className="expense-date">
       <div className="expense-date__month">{month}</div>

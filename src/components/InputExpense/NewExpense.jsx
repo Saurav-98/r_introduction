@@ -8,9 +8,6 @@ const NewExpense = ({ onSaveExpense }) => {
       ...enteredExpenseData,
       id: Math.ceil(Math.random() * 20236).toString(),
     };
-    console.log(expenseData);
-    console.log("From New Expense Component");
-
     onSaveExpense(expenseData);
   };
   return (

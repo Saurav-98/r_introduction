@@ -4,10 +4,7 @@ import Expenses from "./components/ExpenseApp/Expenses";
 import NewExpense from "./components/InputExpense/NewExpense";
 
 const App = () => {
-  const saveExpenseDataItem = (expenseItem) => {
-    console.log("Printing from App", expenseItem);
-  };
-  const expenses = [
+  const INITIAL_EXPENSES = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -28,6 +25,11 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  const [expenses, setExpenses] = React.useState(INITIAL_EXPENSES);
+
+  const saveExpenseDataItem = (expenseItem) => {
+    setExpenses((prev) => [expenseItem, ...prev]);
+  };
   return (
     <div>
       <h2>Let's Get Started</h2>

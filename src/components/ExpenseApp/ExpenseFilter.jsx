@@ -4,7 +4,6 @@ import "./ExpenseFilter.css";
 const ExpenseFilter = ({ onYearEnter, selected }) => {
   const yearChangeHandler = (e) => {
     onYearEnter(e.target.value);
-    console.log("Submitted Year", e.target.value);
   };
   return (
     <div className="expenses-filter">
